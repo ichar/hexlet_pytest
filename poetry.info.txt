@@ -1,0 +1,46 @@
+# Установка poetry https://python-poetry.org/docs/#installation
+poetry new . # Создание базовой структуры
+poetry install # Установка зависимостей
+
+$ cd /data/works/hexlett_pytest
+$ poetry run pytest
+-------------------
+
+platform linux -- Python 3.8.10, pytest-5.4.3, py-1.11.0, pluggy-0.13.1
+rootdir: /data/works/hexlet_pytest
+collected 1 item                                                                                                                             
+
+tests/test_hexlet_pytest.py . [100%]
+
+# This mean the package installed correctly
+-------------------
+
+run test with inner prints:
+
+$ poetry run pytest -s
+----------------------
+
+collecting ... OK!
+
+
+In order to repair poetry in current folder:
+
+copy or create `pyproject.toml` file and check 
+'''
+[tool.poetry]
+name = "current folder with project root folder"
+'''
+run
+$ poetry install
+
+check `poetry.lock` file exists
+
+check `__init__.py` folders and espesially `__version__` in `<project root>/src/__init__py`
+
+__version__ = '0.1.0'
+
+run
+
+$ poetry run pytest
+
+

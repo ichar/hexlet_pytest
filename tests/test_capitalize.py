@@ -1,9 +1,9 @@
-rom capitalize import capitalize
+from src.capitalize import capitalize
 
 if capitalize('hello') != 'Hello':
-    raise Exception('Функция работает неверно!')
+    raise Exception('error!')
 
 if capitalize('') != '':
-    raise Exception('Функция работает неверно!')
+    raise Exception('error!')
 
-print('Все тесты пройдены!')
+print('OK!')
